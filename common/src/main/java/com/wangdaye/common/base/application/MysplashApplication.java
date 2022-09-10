@@ -11,7 +11,6 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.wangdaye.common.base.activity.LoadableActivity;
 import com.wangdaye.common.base.activity.MysplashActivity;
 import com.wangdaye.base.unsplash.Photo;
-import com.wangdaye.common.utils.helper.CrashReportHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +40,6 @@ public abstract class MysplashApplication extends MultiModulesApplication {
             ARouter.openDebug();
         }
         ARouter.init(this);
-
-        CrashReportHelper.init(this);
     }
 
     public static boolean isDebug(Context c) {

@@ -1,7 +1,5 @@
 package com.wangdaye.common.network.interceptor;
 
-import com.wangdaye.common.utils.helper.CrashReportHelper;
-
 import okhttp3.Interceptor;
 import okhttp3.Protocol;
 import okhttp3.Request;
@@ -11,7 +9,6 @@ abstract class ReportExceptionInterceptor implements Interceptor {
 
     void handleException(Exception e) {
         e.printStackTrace();
-        CrashReportHelper.report(e);
     }
 
     Response nullResponse(Request request) {
